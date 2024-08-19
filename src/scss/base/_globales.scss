@@ -1,0 +1,70 @@
+@use 'variables' as v; //importamos el archivo para que puedan usar las variables
+
+html {
+    font-size: 62.5%;//hace que 1 rem se igual a 10px
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*::after {
+    box-sizing: inherit; //este código se usa para que el padding no represente un problema
+}
+
+body {
+    font-family: v.$fuente_principal;
+    font-size: 1.6rem;
+
+&.fijar-body {
+
+    overflow: hidden;
+
+}
+
+&.body-scroll { //clase javascript
+    padding-top: 8.6rem; // para que tenga los mismo pixeles y no haga un salto de línea
+
+
+}
+
+}
+
+p {
+    font-size: 2rem;
+    color: v.$negro;
+    line-height: 1.5;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin:0 auto; //para centrar horinzontalmente
+}
+
+a {
+    text-decoration: none; //para quitar las lineas a los enlaces
+}
+
+h1,h2,h3 {
+    margin: 0 0 5rem 0;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3.6rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+
+}

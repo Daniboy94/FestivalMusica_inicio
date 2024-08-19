@@ -1,0 +1,50 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.video {
+    position: relative; //position relative y absolute para que el texto este dentro del video
+    max-height: 70rem;
+    min-height: 50rem;
+    overflow: hidden; //hace que el video no se parta por la mitad
+    
+    .overlay {
+        position: absolute;
+        background: rgb(165,3,255);
+        background: linear-gradient(270deg, rgba(165,3,255,0.5) 0%, rgba(255,0,110,0.3) 93%);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column; //sirve para alinear verticalmente por lo cual centrará el título
+        justify-content: center;
+    }
+
+
+video {
+    width: auto;
+    display: block;
+    @include m.desktop {
+        width: 100%;
+    }
+}
+
+}
+
+.contenido-video {
+    z-index: 1; // hace que superponga para que el titulo pueda ser seleccionado
+    h2 {
+        color: v.$blanco;
+        font-size: 7rem;
+        margin: 0;
+    }
+
+    p {
+        background-color: v.$rosa;
+        color: v.$blanco;
+        display: inline-block; // este código hace que el backgroundcolor ocupe el largo del texto
+        padding: 1rem 2rem;
+        font-weight: 700;
+        font-size: 2.4rem;
+        margin: 0;
+    }
+
+}

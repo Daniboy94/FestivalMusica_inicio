@@ -1,0 +1,36 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.sobre-festival{
+    padding: 5rem 0;
+   
+    @include m.tablet {
+
+    @include m.grid(2, 5rem);//numero 2 para crear las columnas necesarias, ver "mixin grid 5rem para $espaciado"
+    
+   }
+}
+
+.contenido-festival{
+    display: flex;
+    flex-direction: column; // va a alinear el contenido verticalmente
+    justify-content: center;
+    
+    margin-top: 5rem;
+
+    @include m.tablet{
+
+        margin-top: 0; //para que un dispositivo más grande no tenga separación de 5rem
+        
+    }
+
+    h2 {
+        margin-bottom: 2rem;
+
+    }
+
+    .fecha {
+        color: v.$rosa;
+        font-weight: 700;
+    }
+}
